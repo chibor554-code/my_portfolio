@@ -1,0 +1,242 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Services{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="hero">
+    <h1>Hi, I'm Ikenna Michael Chibor 👋</h1>
+    <h2>Backend Django Developer | Python Programmer | Data Analyst</h2>
+    <p>
+        I build secure, scalable, and efficient web applications using Python and Django.
+        I'm passionate about solving real-world problems through clean code and data-driven solutions.
+    </p>
+
+    <a href="{% url 'projects' %}" class="btn">View My Projects</a>
+    <a href="{% url 'contact' %}" class="btn">Contact Me</a>
+</section>
+
+<!-- Services -->
+<section class="container py-5">
+
+    <div class="text-center mb-5">
+        <h2>What I Offer</h2>
+        <p>
+            Professional backend development services tailored to your needs.
+        </p>
+    </div>
+
+    <div class="row g-4">
+
+        <!-- Backend Development -->
+        <div class="col-md-4">
+            <div class="card h-100 shadow">
+                <div class="card-body">
+                    <h4>Backend Development</h4>
+
+                    <ul>
+                        <li>Django Web Applications</li>
+                        <li>User Authentication</li>
+                        <li>REST APIs</li>
+                        <li>Admin Dashboard</li>
+                        <li>Database Design</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Portfolio Websites -->
+        <div class="col-md-4">
+            <div class="card h-100 shadow">
+                <div class="card-body">
+                    <h4>Portfolio Websites</h4>
+
+                    <ul>
+                        <li>Personal Portfolio</li>
+                        <li>Business Portfolio</li>
+                        <li>Responsive Design</li>
+                        <li>Contact Forms</li>
+                        <li>SEO Friendly</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Custom Web Apps -->
+        <div class="col-md-4">
+            <div class="card h-100 shadow">
+                <div class="card-body">
+                    <h4>Custom Web Applications</h4>
+
+                    <ul>
+                        <li>School Management</li>
+                        <li>Hospital Management</li>
+                        <li>Inventory System</li>
+                        <li>Blog System</li>
+                        <li>E-commerce Backend</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- API Development -->
+        <div class="col-md-4">
+            <div class="card h-100 shadow">
+                <div class="card-body">
+                    <h4>API Development</h4>
+
+                    <ul>
+                        <li>Django REST Framework</li>
+                        <li>JWT Authentication</li>
+                        <li>Third-party APIs</li>
+                        <li>Payment Integration</li>
+                        <li>API Documentation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Database -->
+        <div class="col-md-4">
+            <div class="card h-100 shadow">
+                <div class="card-body">
+                    <h4>Database Design</h4>
+
+                    <ul>
+                        <li>PostgreSQL</li>
+                        <li>MySQL</li>
+                        <li>SQLite</li>
+                        <li>Database Optimization</li>
+                        <li>Data Modeling</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Deployment -->
+        <div class="col-md-4">
+            <div class="card h-100 shadow">
+                <div class="card-body">
+                    <h4>Deployment</h4>
+
+                    <ul>
+                        <li>Render Deployment</li>
+                        <li>Railway Deployment</li>
+                        <li>PythonAnywhere</li>
+                        <li>Domain Setup</li>
+                        <li>SSL Configuration</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Why Choose Me -->
+<section class="bg-light py-5">
+    <div class="container">
+
+        <div class="text-center mb-4">
+            <h2>Why Choose Me?</h2>
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-6">
+                <ul class="list-group">
+                    <li class="list-group-item">✔ Clean and maintainable code</li>
+                    <li class="list-group-item">✔ Secure web applications</li>
+                    <li class="list-group-item">✔ Responsive communication</li>
+                </ul>
+            </div>
+
+            <div class="col-md-6">
+                <ul class="list-group">
+                    <li class="list-group-item">✔ Scalable architecture</li>
+                    <li class="list-group-item">✔ On-time project delivery</li>
+                    <li class="list-group-item">✔ Ongoing support</li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- Technologies -->
+<section class="container py-5">
+
+    <div class="text-center">
+        <h2>Technologies I Use</h2>
+    </div>
+
+    <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
+
+        <span class="badge bg-primary p-3">Python</span>
+        <span class="badge bg-success p-3">Django</span>
+        <span class="badge bg-danger p-3">Django REST Framework</span>
+        <span class="badge bg-warning text-dark p-3">HTML5</span>
+        <span class="badge bg-info text-dark p-3">CSS3</span>
+        <span class="badge bg-secondary p-3">Bootstrap</span>
+        <span class="badge bg-dark p-3">JavaScript</span>
+        <span class="badge bg-primary p-3">PostgreSQL</span>
+        <span class="badge bg-success p-3">Git</span>
+        <span class="badge bg-dark p-3">GitHub</span>
+
+    </div>
+
+</section>
+
+<!-- Process -->
+<section class="bg-light py-5">
+
+    <div class="container">
+
+        <div class="text-center mb-4">
+            <h2>My Development Process</h2>
+        </div>
+
+        <ol class="list-group list-group-numbered">
+
+            <li class="list-group-item">Understand your project requirements.</li>
+
+            <li class="list-group-item">Plan and design the solution.</li>
+
+            <li class="list-group-item">Develop the application.</li>
+
+            <li class="list-group-item">Test and fix bugs.</li>
+
+            <li class="list-group-item">Deploy the application.</li>
+
+            <li class="list-group-item">Provide maintenance and support.</li>
+
+        </ol>
+
+    </div>
+
+</section>
+
+<!-- Call to Action -->
+<section class="bg-dark text-white text-center py-5">
+
+    <div class="container">
+
+        <h2>Let's Build Your Next Project</h2>
+
+        <p class="lead">
+            Have an idea? Let's turn it into a secure and scalable web application.
+        </p>
+
+        <a href="{% url 'contact' %}" class="btn btn-primary btn-lg">
+            Contact Me
+        </a>
+
+    </div>
+
+</section>
+
+{% endblock %}

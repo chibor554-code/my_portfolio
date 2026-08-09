@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+<section class="hero">
+
+    <div class="hero-text">
+
+        <span class="badge floating-text">welcome!</span>
+
+        <h1>Hi, I'm <span> IKENNA MICHAEL CHIBOR </span> from Nigeria</h1>
+        <h2>Backend Django Developer | Python Programmer | Data Analyst</h2>
+
+        <p>
+            I build secure, scalable, and high-performance web applications
+            using Python and Django. I enjoy solving real-world problems
+            through clean code and modern software development, with a
+            focus on building software for Africa.
+        </p>
+
+            {% comment %} <a href="{% url 'portfolio:project_list' %}" class="btn-outline">
+                View Projects
+            </a> {% endcomment %}
+
+        </div>
+
+    </div>
+
+    <div class="hero-image">
+        <img src="{% static 'image/profile.jpg' %}" alt="profile picture">
+    </div>
+
+</section>
+
+<section class="stats">
+
+    <div class="stat-card">
+        <h3>currently</h3>
+        <p>Learning, Building & Creating solutions.</p>
+    </div>
+
+</section>
+
+<section class="about">
+    <div class="container-custom">
+
+        <h2>About Me</h2>
+
+        <p>
+            I am a Backend Django Developer passionate about designing
+            secure web applications and REST APIs. I enjoy learning new
+            technologies and building software that solves real-world
+            business problems.
+        </p>
+
+    </div>
+</section>
+
+<section class="tech-stack">
+    {% comment %} <div class="container-custom"> {% endcomment %}
+
+        <h2>Tech Stack</h2>
+
+        <div class="tech-grid">
+
+            <div class="tech-card">PYTHON</div>
+
+            <div class="tech-card">DJANGO</div>
+
+            <div class="tech-card">HTML5</div>
+
+            <div class="tech-card">CSS3</div>
+
+            <div class="tech-card">JAVASCRIPT</div>
+
+            <div class="tech-card">SQLITE</div>
+
+            <div class="tech-card">POSTGRESQL</div>
+
+            <div class="tech-card">GIT & GITHUB</div>
+
+            <div class="tech-card">REST APIs</div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="cta">
+    <div class="container-custom">
+
+        <h2>Let's Build Something Amazing for You</h2>
+
+        <p>
+            I'm available for internships, freelance work, and backend development opportunities.
+        </p>
+
+        <a href="{% url 'portfolio:contact' %}" class="btn-primary">
+            Hire Me
+        </a>
+
+    </div>
+</section>
+
+{% endblock %}
