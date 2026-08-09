@@ -1,0 +1,278 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About Me{% endblock %}
+
+{% block content %}
+
+<section class="container py-5">
+
+    <!-- Heading -->
+    <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold">About Me</h1>
+        <p class="lead text-muted">
+            Passionate Django Backend Developer dedicated to building secure,
+            scalable, and efficient web applications for you and your Businesses.
+        </p>
+    </div>
+
+    <!-- About -->
+    <div class="row align-items-center mb-5">
+
+        <div class="col-lg-4 text-center">
+            <img src="{% static 'images/profile.jpg' %}"
+                 alt="Profile Picture"
+                 class="img-fluid rounded-circle shadow"
+                 width="280">
+        </div>
+
+        <div class="col-lg-8">
+
+            <h2>Hello, I'm Ikenna Michael Chibor</h2>
+
+            <h5 class="text-primary mb-3">
+                Python & Django Backend Developer
+            </h5>
+
+            <p>
+                I am a passionate backend developer specializing in Python and
+                Django. I enjoy building secure, scalable, and user-friendly web
+                applications that solve real-world problems.
+            </p>
+
+            <p>
+                My goal is to continuously improve my skills while helping
+                businesses and individuals transform their ideas into reliable
+                software solutions.
+            </p>
+
+            <a href="{% url 'contact' %}" class="btn btn-primary">
+                Hire Me
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- Skills -->
+    <div class="mb-5">
+
+        <h2 class="text-center mb-4">Technical Skills</h2>
+
+        <div class="row">
+
+            <div class="col-md-3 mb-3">
+                <div class="card text-center shadow-sm">
+                    <div class="card-body">
+                        <h5>Python</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-3">
+                <div class="card text-center shadow-sm">
+                    <div class="card-body">
+                        <h5>Django</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-3">
+                <div class="card text-center shadow-sm">
+                    <div class="card-body">
+                        <h5>HTML & CSS</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-3">
+                <div class="card text-center shadow-sm">
+                    <div class="card-body">
+                        <h5>Bootstrap</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-3">
+                <div class="card text-center shadow-sm">
+                    <div class="card-body">
+                        <h5>JavaScript</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-3">
+                <div class="card text-center shadow-sm">
+                    <div class="card-body">
+                        <h5>Git</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-3">
+                <div class="card text-center shadow-sm">
+                    <div class="card-body">
+                        <h5>GitHub</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-3">
+                <div class="card text-center shadow-sm">
+                    <div class="card-body">
+                        <h5>PostgreSQL</h5>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Education -->
+    <div class="mb-5">
+
+        <h2 class="text-center mb-4">Education</h2>
+
+        <div class="card shadow">
+
+            <div class="card-body">
+
+                <h4>University of Port Harcourt</h4>
+
+                <p class="mb-1">
+                    B.Sc. Economics
+                </p>
+
+                <p class="text-muted">
+                    I'm an Economist with a strong passion for software development and
+                    backend engineering.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Services -->
+    <div class="mb-5">
+
+        <h2 class="text-center mb-4">What I Do</h2>
+
+        <div class="row">
+
+            <div class="col-md-4 mb-4">
+
+                <div class="card h-100 shadow">
+
+                    <div class="card-body text-center">
+
+                        <h4>Web Development</h4>
+
+                        <p>
+                            Build modern and responsive websites using Django.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4 mb-4">
+
+                <div class="card h-100 shadow">
+
+                    <div class="card-body text-center">
+
+                        <h4>Backend Development</h4>
+
+                        <p>
+                            Design secure APIs, authentication systems, and
+                            scalable databases.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4 mb-4">
+
+                <div class="card h-100 shadow">
+
+                    <div class="card-body text-center">
+
+                        <h4>Deployment</h4>
+
+                        <p>
+                            Deploy Django applications using modern cloud
+                            platforms.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Why Hire Me -->
+    <div class="mb-5">
+
+        <h2 class="text-center mb-4">Why Work With Me?</h2>
+
+        <ul class="list-group">
+
+            <li class="list-group-item">
+                ✔ Clean and maintainable code
+            </li>
+
+            <li class="list-group-item">
+                ✔ Time management
+            </li>
+
+            <li class="list-group-item">
+                ✔ Secure Django applications
+            </li>
+
+            <li class="list-group-item">
+                ✔ Responsive website development
+            </li>
+
+            <li class="list-group-item">
+                ✔ Fast learning and problem-solving
+            </li>
+
+            <li class="list-group-item">
+                ✔ Excellent communication
+            </li>
+
+        </ul>
+
+    </div>
+
+    <!-- CTA -->
+    <div class="text-center py-5">
+
+        <h2>Let's Build Something Amazing Together</h2>
+
+        <p class="lead">
+            I'm available for freelance projects, internships, and full-time
+            opportunities.
+        </p>
+
+        <a href="{% url 'contact' %}" class="btn btn-primary btn-lg">
+            Contact Me
+        </a>
+
+    </div>
+
+</section>
+
+{% endblock %}
