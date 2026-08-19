@@ -8,11 +8,11 @@ LOGIN_REDIRECT_URL = "home"
 LOGOUT_REDIRECT_URL = "portfolio:login"
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = "django-insecure-your-development-secret-key-123456789"
+SECRET_KEY =  os.getenv("SECRET_KEY")
 
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["portfolio.onrender.com",]
 
 
 INSTALLED_APPS = [
@@ -56,10 +56,9 @@ TEMPLATES = [
 WSGI_APPLICATION = "portfolio_page.wsgi.application"
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+"default": dj_database_url.config(
+        default=os.getenv("DATABASE_URL")
+    )
 }
 
 LANGUAGE_CODE = "en-us"
