@@ -8,12 +8,12 @@ LOGIN_REDIRECT_URL = "home"
 LOGOUT_REDIRECT_URL = "portfolio:login"
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY =  os.getenv("SECRET_KEY")
+SECRET_KEY = "django-insecure-your-development-secret-key-123456789"
 
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ["portfolio.onrender.com",
-]
+ALLOWED_HOSTS = []
+
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -22,7 +22,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "portfolio.apps.PortfolioConfig",
+    "portfolio",
 ]
 
 MIDDLEWARE = [
@@ -56,11 +56,11 @@ TEMPLATES = [
 WSGI_APPLICATION = "portfolio_page.wsgi.application"
 
 DATABASES = {
-    "default": dj_database_url.config(
-        default=os.getenv("DATABASE_URL")
-    )
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
-   
 
 LANGUAGE_CODE = "en-us"
 
@@ -73,9 +73,7 @@ STATIC_URL = "static/"
 STATIC_ROOT = BASE_DIR / "staticfiles"
 STATICFILES_STORAGE =  "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
-]
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"
