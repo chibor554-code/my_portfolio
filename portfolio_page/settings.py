@@ -1,16 +1,13 @@
-import dj_database_url
-from pathlib import Path
 import os
+from pathlib import Path
+import dj_database_url
 
-
-LOGIN_URL = "portfolio:login"
-LOGIN_REDIRECT_URL = "home"
-LOGOUT_REDIRECT_URL = "portfolio:login"
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY =  os.getenv("SECRET_KEY")
+# Security & Debug Settings
+SECRET_KEY = os.getenv("SECRET_KEY", "django-insecure-fallback-key-change-in-prod")
+DEBUG = os.getenv('DEBUG', 'False').lower() in ('true', '1', 't')
 
-DEBUG = os.getenv('True')
 ALLOWED_HOSTS = [
     'my-portfolio-3-d6cj.onrender.com',
     '.onrender.com',
@@ -18,16 +15,20 @@ ALLOWED_HOSTS = [
     '127.0.0.1',
 ]
 
+# Authentication Navigation
+LOGIN_URL = "portfolio:login"
+LOGIN_REDIRECT_URL = "home"
+LOGOUT_REDIRECT_URL = "portfolio:login"
 
-
+# Application Definition
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
+    "whitenoise.runserver_nostatic",
     "django.contrib.staticfiles",
-    'whitenoise.runserver_nostatic',
     "portfolio",
 ]
 
@@ -42,7 +43,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = "portfolio.urls"
+ROOT_URLCONF = "portfolio_page.urls"
 
 TEMPLATES = [
     {
@@ -59,35 +60,31 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "portfolio.wsgi.application"
+WSGI_APPLICATION = "portfolio_page.wsgi.application"
 
+# Database Configuration
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.config(
+        default=f"sqlite:///{BASE_DIR / 'db.sqlite3'}",
+        conn_max_age=600,
+    )
 }
 
-WSGI_APPLICATION = 'portfolio_page.wsgi.application'
-
+# Internationalization
 LANGUAGE_CODE = "en-us"
-
 TIME_ZONE = "UTC"
-
 USE_I18N = True
 USE_TZ = True
 
-STATIC_URL = "static/"
+# Static & Media Files
+STATIC_URL = "/static/"
 STATIC_ROOT = BASE_DIR / "staticfiles"
-# STATICFILES_STORAGE =  "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 STORAGES = {
     "staticfiles": {
         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
     },
 }
-
-BASE_DIR = Path(__file__).resolve().parent.parent
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"
