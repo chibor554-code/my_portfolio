@@ -10,7 +10,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY =  os.getenv("SECRET_KEY")
 
-DEBUG = os.getenv('DEBUG')
+DEBUG = os.getenv('True')
 ALLOWED_HOSTS = [
     'my-portfolio-3-d6cj.onrender.com',
     '.onrender.com',
