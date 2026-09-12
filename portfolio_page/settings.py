@@ -1,6 +1,5 @@
 from pathlib import Path
 import os
-import dj_database_url
 
 
 LOGIN_URL = "portfolio:login"
@@ -10,9 +9,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY =  os.getenv("SECRET_KEY")
 
-DEBUG = False
+DEBUG = os.getenv('DEBUG')
+ALLOWED_HOSTS = ["*"]
 
-ALLOWED_HOSTS = ['my-portfolio-ikenna.onrender.com', '127.0.0.1', 'localhost']
 
 
 INSTALLED_APPS = [
@@ -62,6 +61,8 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+WSGI_APPLICATION = 'ortfolio_page.wsgi.application'
 
 LANGUAGE_CODE = "en-us"
 
